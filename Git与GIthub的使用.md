@@ -22,8 +22,35 @@ git clone https://github.com/HellowAmy/cpp_base.git
 git init
 git add.
 git commit -m "init"
-git branch -M main
-git remote add origin https://github.com/HellowAmy/learn_note.git
-git push -u origin main
+git remote add origin git@github.com:HellowAmy/learn_note.git
+git push -u origin master
+```
+
+## 4.提交修改三部曲
+
+```
+git add .
+git commit -m "change test"
+git push origin
+```
+
+### 5.修改提交的仓库别名
+
+新增别名
+
+```
+git remote add origin_http https://github.com/HellowAmy/learn_note.git
+```
+
+查看别名
+
+```
+git remote -v
+```
+
+删除别名
+
+```
+git remote remove origin_http
 ```
 
