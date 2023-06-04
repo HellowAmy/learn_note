@@ -112,7 +112,8 @@ apt install cmake -y
 ## 11.Qt图形库依赖
 
 ```
-apt-get install libgl1-mesa-dev
+sudo apt-get install libgl1-mesa-dev
+sudo apt install libgl-dev
 ```
 
 ## 12.安装tree查看命令
