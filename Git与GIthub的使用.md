@@ -223,3 +223,60 @@ git stash pop
 完成dev-2后切换到dev-1，执行stash pop弹出暂存任务
 ```
 
+## 8.代码回滚 (reset)
+
+```
+git checkout dev
+git log
+git reset 3ebe4a376aebde039edc17337adf6fa157454697
+
+== 目的 ==
+回滚已经提交的代码，并重新获取被回滚的代码，准备重新修改并提交
+
+== 常用命令 ==
+git reset HEAD^               //回滚上一个版本，获取代码
+git reset <commit>            //回滚到指定版本，获取代码
+git reset --hard <commit>     //回滚到指定版本，删除回滚的代码，不推荐
+
+== 操作说明 ==
+切换到需要回滚的分支
+查看提交记录，获取回滚版本编号
+执行回滚命令
+完成回滚，且获取提交前的保留获取代码
+```
+
+## 8.抹除历史提交 (revert)
+
+```
+git checkout dev
+git log
+git revert 3ebe4a376aebde039edc17337adf6fa157454697
+
+== 目的 ==
+以新提交的方式，抹除以前提交的代码，相当于从未提交，用清理中间某个版本的错误提交
+
+== 操作说明 ==
+类似reset，只使用指定版本编号抹除某一个版本提交的内容
+检查分支，获取提交版本编号，执行revert命令
+完成清除，也可能存在冲突，解决冲突即可
+
+
+例子：
+version4
+version3
+version2
+version1
+以提交4个版本，需要回滚版本version2
+
+使用revert：(以新提交覆盖旧提交，此时version2内容被删除)
+version5 is delete version2
+version4
+version3
+version2
+version1
+
+使用reset：(回滚到version2，手动删除version2内容，并重新提交)
+version5 is delete version2
+version1
+```
+
