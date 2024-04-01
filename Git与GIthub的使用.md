@@ -65,7 +65,12 @@ git remote remove origin_http
 在Git项目中创建dev分支
 
 ```
+方法1:
 git branch dev
+```
+```
+方法2:
+git checkout -b dev
 ```
 
 切换到dev分支
