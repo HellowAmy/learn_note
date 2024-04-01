@@ -34,7 +34,7 @@ git commit -m "change test"
 git push origin
 ```
 
-### 5.修改提交的仓库别名
+## 5.修改提交的仓库别名
 
 新增别名
 
@@ -54,7 +54,7 @@ git remote -v
 git remote remove origin_http
 ```
 
-# 6.分支管理
+## 6.分支管理
 
 ##### 分支管理说明：Git的分支管理可以在同一个项目下控制不同的文件，且提交到分支的文件不互通，切换分支会同时切换到该分支管理的文件，其他分支的文件会被隐藏
 
@@ -181,5 +181,40 @@ are you ok?
 
 ```
 git branch -d dev
+```
+
+## 6.选择其他分支版本合并 (cherry-pick)
+
+```
+git checkout dev-1
+git log
+git checkout dev-2
+git cherry-pick 3619a79b5e98f7336787e903af37b225a1d21aa4
+
+
+== 目的 ==
+在分支dev-2中，合并dev-1的某一个版本的提交
+
+== 操作说明 ==
+切换到dev-1，查看提交日志，复制commit编号
+切换到dev-2，执行cherry-pick命令，选择需要合并的其他分支的commit编号
+完成合并，此时dev-1分支成功获取到dev-2分支的某一个提交
+```
+
+## 7.暂存内容 (stash)
+
+```
+git checkout dev-1
+git stash
+git checkout dev-2
+git checkout dev-1
+git stash pop
+
+== 目的 ==
+在dev-1编码时，需要紧急转入dev-2修改内容，占存当前内容，完成dev-2后返回到dev-1继续当前任务
+
+== 操作说明 ==
+切换到dev-2之前，stash暂存任务
+完成dev-2后切换到dev-1，执行stash pop弹出暂存任务
 ```
 
