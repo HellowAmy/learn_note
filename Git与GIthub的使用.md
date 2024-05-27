@@ -188,6 +188,17 @@ are you ok?
 git branch -d dev
 ```
 
+将文件从版本管理中移除（用于添加.gitignore之后重新忽略）
+
+
+```
+== 移除文件夹 ==
+git rm -r --cached build/ 
+
+== 移除文件 ==
+git rm --cached Tsflog.log
+```
+
 ## 6.选择其他分支版本合并 (cherry-pick)
 
 ```
