@@ -49,7 +49,7 @@ commentTranslate:更改翻译源
 Git Graph 
 
 # 可预览代码被修改的时间和作者
-Git supercharged
+GitLens --Git supercharged
 ```
 
 ## 7.Python相关插件
