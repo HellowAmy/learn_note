@@ -51,6 +51,17 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
+鼠标换源方式
+```
+-> 设置（右键桌面）
+-> 关于（最底下位置）
+-> 软件更新
+-> 下载自（点开下拉列表）
+-> 其他
+-> mirrors.ustc.edu.cn（选择中科大软件源下载速度更快）
+```
+
+
 ## 2.安装VIM
 
 ```

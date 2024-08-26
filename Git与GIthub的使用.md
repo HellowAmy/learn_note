@@ -6,7 +6,7 @@
 git clone https://github.com/HellowAmy/cpp_base.git
 ```
 
-如果是自己的项目，简易使用ssh链接
+如果是自己的项目，建议使用ssh链接
 
 ## 2.建立ssh连接
 

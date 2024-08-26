@@ -42,3 +42,29 @@ Ctrl + Shift + p
 commentTranslate:更改翻译源
 ```
 
+## 6.Git相关插件
+
+```
+# 可快速查看分支状态
+Git Graph 
+
+# 可预览代码被修改的时间和作者
+Git supercharged
+```
+
+## 7.Python相关插件
+
+```
+# 语法高亮增强
+Pylance 
+
+# 语法高亮
+Python 
+
+# 代码调试
+Python Debugger
+
+# 格式化代码
+Black Formatter
+```
+
