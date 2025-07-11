@@ -27,6 +27,7 @@ sudo apt install libgl1-mesa-dev
 cmake --build .. --target all update_translations
 ~~~
 
+
 ## Qt程序无法输入中文（fcitx5版本）
 ~~~
 # 安装依赖
@@ -48,4 +49,30 @@ sudo apt install fcitx-libs-dev
         option(ENABLE_QT5 "Enable Qt5" Off)
         option(ENABLE_QT6 "Enable Qt6" On)
     3.cmake .. -DENABLE_LIBRARY=false
+~~~
+
+
+## Linux下qt5安装linuxdeployqt工具
+~~~
+# 下载并编译
+git clone https://github.com/probonopd/linuxdeployqt.git
+cd linuxdeployqt
+mkdir build
+cd build
+cmake ..
+make
+
+# 复制到qt5目录
+cp linuxdeployqt qt5/gcc64/bin
+
+# 构建时GLIBC版本太新问题
+    1.降低构建的系统版本
+    2.强制执行（可能造成无法运行的问题）
+        # 兼容旧版本系统（优先推荐）
+            -unsupported-allow-new-glibc
+        # 直接当前系统所有依赖
+            -unsupported-bundle-everything  
+
+# 找不到patchelf工具
+sudo apt install patchelf
 ~~~
