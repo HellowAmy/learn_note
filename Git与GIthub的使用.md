@@ -291,3 +291,20 @@ version5 is delete version2
 version1
 ```
 
+## 9.抹除历史提交 (revert)
+~~~
+git submodule init
+git submodule update --recursive --checkout
+
+
+== 目的 ==
+初始化子模块并拉取模块代码
+
+== 拉取失败时尝试 ==
+如果url是http则修改为git拉取的方式，打开.gitmodules文件
+
+例子：
+源：url = https://github.com/HellowAmy/learn_note.git
+改：url = git@github.com:HellowAmy/learn_note.git
+~~~
+
