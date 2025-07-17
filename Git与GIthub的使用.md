@@ -291,7 +291,7 @@ version5 is delete version2
 version1
 ```
 
-## 9.抹除历史提交 (revert)
+## 9.更新子模块 (submodule)
 ~~~
 git submodule init
 git submodule update --recursive --checkout
