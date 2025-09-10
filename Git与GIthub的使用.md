@@ -308,3 +308,23 @@ git submodule update --recursive --checkout
 改：url = git@github.com:HellowAmy/learn_note.git
 ~~~
 
+## 10.添加子模块 (submodule)
+~~~
+git submodule add https://github.com/HellowAmy/bhtools.git util/bhtools
+git submodule init
+git submodule update
+
+
+== 目的 ==
+为项目创建一个子模块连接，项目会自动生成.gitmodules文件
+
+== 操作说明 ==
+执行操作之后，项目会生成.gitmodules文件，并将连接的项目拉取到本地
+
+== 生成的.gitmodules文件内容 ==
+[submodule "util/bhtools"]
+	path = util/bhtools
+	url = https://github.com/HellowAmy/bhtools.git
+~~~
+
+
